@@ -92,9 +92,8 @@ public class UserController {
      * @param user - пользователь для обновления.
      * @return = возвращаемая страница.
      */
-    @PatchMapping
+    @PatchMapping("/{id}")
     public String update(@ModelAttribute("user") User user) {
-//        userService.update(user);
         userService.save(user);
         return "redirect:/users";
     }

@@ -34,12 +34,6 @@ public class UserServiceImp implements UserService {
         userRepository.save(user);
     }
 
-//    @Transactional
-//    @Override
-//    public void update(User userUpdateInfo) {
-//       userRepository.update(userUpdateInfo.getName(),userUpdateInfo.getSurname(), userUpdateInfo.getAge());
-//    }
-
     @Transactional
     @Override
     public void delete(int id) {
