@@ -92,7 +92,7 @@ public class UserController {
      * @param user - пользователь для обновления.
      * @return = возвращаемая страница.
      */
-    @PatchMapping()
+    @PatchMapping
     public String update(@ModelAttribute("user") User user) {
 //        userService.update(user);
         userService.save(user);
@@ -105,7 +105,7 @@ public class UserController {
      * @param id - id пользователя для удаления.
      * @return = возвращаемая страница.
      */
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/{id}/")
     public String delete(@PathVariable("id") int id) {
         userService.delete(id);
         return "redirect:/users";
